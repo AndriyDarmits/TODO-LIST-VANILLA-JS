@@ -63,7 +63,7 @@ ulList.addEventListener("click", function (event) {
     }
 });
 
-
+// cross-out todo item
 ulList.addEventListener("click", function (event) {
     if (event.target.className === "far fa-check-circle") {
         let temp = event.target.parentElement.parentElement;
