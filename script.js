@@ -4,7 +4,6 @@ const input = document.querySelector(".input");
 const ulList = document.querySelector("#todo-list");
 
 const deleteItem = document.querySelectorAll(".item-delete");
-const lists = document.querySelectorAll("li")
 const submitButton = document.querySelector(".submitButton");
 const deleteSpanList = document.querySelectorAll(".item-delete")
 const doneSpanList = document.querySelectorAll("item-cross-out")
@@ -70,7 +69,7 @@ ulList.addEventListener("click", function (event) {
         temp.classList.add("checked");
         if (temp.classList.contains("checked")) {
             setTimeout(() => {
-                temp.remove();
+                temp.remove();  // delay  after crossing out the item and then - delete it
             }, 3000)
         }
     }
@@ -105,7 +104,7 @@ deleteTodoItem(); */
 }); */
 
 
-
+// add element by clicking on the button
 
 submitButton.addEventListener("click", function (event) {
     event.preventDefault();
@@ -117,16 +116,13 @@ submitButton.addEventListener("click", function (event) {
     }
 });
 
+
+
+// clear all todo item
 const clearAllItem = document.querySelector('.clear-all');
 
-
-
 clearAllItem.addEventListener('click', event => {
-    /* 
-        for (let del of ulList.children) {
-    
-            del.remove();
-        } */
+
 
     ulList.innerHTML = '';
 
