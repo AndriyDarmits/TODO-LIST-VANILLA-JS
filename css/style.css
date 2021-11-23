@@ -37,10 +37,15 @@ body {
 .todo {
   -webkit-box-shadow: 0px 0px 10px 10px rgba(39, 51, 60, 0.2);
           box-shadow: 0px 0px 10px 10px rgba(39, 51, 60, 0.2);
+  border-radius: 10px;
+  padding: 0.5rem;
 }
 
 h1 {
   text-align: center;
+  text-transform: uppercase;
+  color: #acd0e6;
+  margin-bottom: 2rem;
 }
 
 h1 i {
@@ -126,17 +131,30 @@ h1 i {
 
 .ul-List {
   list-style: none;
+  font-size: 1.6rem;
 }
 
 .item-cross-out {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   opacity: 0;
+  padding-right: 1rem;
+}
+
+.item-delete {
+  float: right;
+  margin-right: 1rem;
 }
 
 .related-to-hover {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+  padding: 1rem 0;
+  border-top: 1px solid #377c91;
+}
+
+.related-to-hover:first-child {
+  border: 0;
 }
 
 .related-to-hover:hover {
@@ -147,7 +165,32 @@ h1 i {
   opacity: 1;
 }
 
+.related-to-hover > span > i {
+  color: #fff;
+}
+
 .checked {
   text-decoration: line-through;
+}
+
+.clear-all {
+  display: block;
+  border: 0;
+  color: #fff;
+  background-color: #1a6486;
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  margin-top: 2rem;
+}
+
+.clear-all:hover {
+  background-color: #165471;
+}
+
+.todo-text {
+  color: #acd0e6;
 }
 /*# sourceMappingURL=style.css.map */

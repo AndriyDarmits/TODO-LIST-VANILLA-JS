@@ -32,10 +32,17 @@ body{
 
 .todo{
     box-shadow: 0px 0px 10px 10px rgba(39, 51, 60, 0.2);
+    border-radius: 10px;
+    padding: 0.5rem;
+    
 }
 
 h1{
     text-align: center;
+    text-transform: uppercase;
+    color: rgb(172, 208, 230);
+    margin-bottom: 2rem;
+
 
     i{
         margin-left: 10px;
@@ -55,7 +62,7 @@ h1{
     &:focus{
        background: rgb(16, 199, 212);
        outline: none;
-       color: rgb(55, 140, 151);;
+       color: rgb(55, 140, 151);
        &::placeholder{
            color: rgb(55, 140, 151);
        }
@@ -79,28 +86,66 @@ h1{
 }
 .ul-List{
     list-style: none;
+    font-size: 1.6rem;
 }
 
 .item-cross-out{
     transition: all 0.3s linear;
     opacity: 0;
+    padding-right: 1rem;
+}
+
+.item-delete{
+    float:right;
+    margin-right: 1rem;
 }
 
 .related-to-hover{
     transition: all 0.3s linear;
-
+    padding: 1rem 0;
+    border-top: 1px solid rgb(55, 124, 145);
+    &:first-child{
+        border: 0;
+    }
     &:hover{
         background-color:rgb(12, 136, 161);
         .item-cross-out{
             opacity: 1;
         }
     }
-}
+    &>span>i{
+        color: #fff;
+    }
+    }
 
 
 .checked{
     text-decoration:line-through;
+    
+
 }
 
+.clear-all{
+    display: block;
+    border: 0;
+    
+
+    color: #fff;
+    background-color:  #1a6486;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+    margin-top: 2rem;
+
+
+    &:hover{
+        background-color:  darken(#1a6486, 5%);
+    }
+    
+}
+.todo-text{
+    color: rgb(172, 208, 230);
+}
 
 
