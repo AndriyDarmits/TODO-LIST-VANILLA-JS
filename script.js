@@ -8,13 +8,15 @@ const submitButton = document.querySelector(".submitButton");
 const deleteSpanList = document.querySelectorAll(".item-delete")
 const doneSpanList = document.querySelectorAll("item-cross-out")
 const addCheckedClass = document.querySelector(".related-to-hover");
-console.log(addCheckedClass);
+console.log(ulList.innerText);
 
 
 
 function createTodoItem() {
     const li = document.createElement("li");
     li.classList.add("related-to-hover");
+
+
 
     const spanDone = document.createElement("span")
 
@@ -41,7 +43,14 @@ function createTodoItem() {
 
     spanDelete.appendChild(deleteIcon);
 
-    ulList.appendChild(li).append(spanDone, spanText, spanDelete);
+
+
+    li.append(spanDone, spanText, spanDelete);
+
+    ulList.prepend(li);
+
+
+
 
 
 
