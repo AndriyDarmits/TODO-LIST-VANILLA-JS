@@ -139,6 +139,55 @@ clearAllItem.addEventListener('click', event => {
 })
 
 
+// if it was double pressed on the item - show input
+ulList.addEventListener('dblclick', editItem);
+
+
+
+function editItem(event) {
+
+    function sendInputValue(e) {
+        if (e.code === "Enter") {
+            event.target.querySelector(".todo-text").textContent = this.value;
+            this.remove();
+
+        }
+    }
+
+    if (event.target.closest('.related-to-hover')) {
+
+        if (event.target.getElementsByClassName('input-edit').length < 1) {
+
+            //create input to edit items
+            let inputEdit = document.createElement('input');
+            inputEdit.classList.add("input-edit");
+            inputEdit.setAttribute('type', 'text');
+            event.target.append(inputEdit);
+
+            // set current item`s content to input`s value
+            inputEdit.value = event.target.querySelector(".todo-text").textContent;
+
+            // add event to send input value
+
+            inputEdit.addEventListener("keyup", sendInputValue);
+
+        } else {
+            return;
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

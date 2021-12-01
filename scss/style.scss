@@ -147,5 +147,28 @@ h1{
 .todo-text{
     color: rgb(172, 208, 230);
 }
+.input-edit{
+        margin-left: 1rem;
+        color: rgb(55, 140, 151);
+        height: 2rem;
+        border: none;
+        background-color: rgb(16, 199, 212);
+        &:focus{
+           background: rgb(16, 199, 212);
+           outline: none;
+           color: rgb(55, 140, 151);
+           &::placeholder{
+               color: rgb(55, 140, 151);
+           }
+        }
+        &::placeholder{
+            color: rgb(55, 140, 151);
+        }
+    
+    
+}
+
+
+
 
 

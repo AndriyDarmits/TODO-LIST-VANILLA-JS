@@ -193,4 +193,50 @@ h1 i {
 .todo-text {
   color: #acd0e6;
 }
+
+.input-edit {
+  margin-left: 1rem;
+  color: #378c97;
+  height: 2rem;
+  border: none;
+  background-color: #10c7d4;
+}
+
+.input-edit:focus {
+  background: #10c7d4;
+  outline: none;
+  color: #378c97;
+}
+
+.input-edit:focus::-webkit-input-placeholder {
+  color: #378c97;
+}
+
+.input-edit:focus:-ms-input-placeholder {
+  color: #378c97;
+}
+
+.input-edit:focus::-ms-input-placeholder {
+  color: #378c97;
+}
+
+.input-edit:focus::placeholder {
+  color: #378c97;
+}
+
+.input-edit::-webkit-input-placeholder {
+  color: #378c97;
+}
+
+.input-edit:-ms-input-placeholder {
+  color: #378c97;
+}
+
+.input-edit::-ms-input-placeholder {
+  color: #378c97;
+}
+
+.input-edit::placeholder {
+  color: #378c97;
+}
 /*# sourceMappingURL=style.css.map */
