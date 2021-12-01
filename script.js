@@ -142,6 +142,12 @@ clearAllItem.addEventListener('click', event => {
 // if it was double pressed on the item - show input
 ulList.addEventListener('dblclick', editItem);
 
+document.addEventListener('keyup', function (eventUp) {
+    if (eventUp.code === "KeyE") {
+        editItem(event);
+    }
+})
+
 
 
 function editItem(event) {
@@ -154,7 +160,7 @@ function editItem(event) {
         }
     }
 
-    if (event.target.closest('.related-to-hover')) {
+    if (event.target.className === "related-to-hover") {
 
         if (event.target.getElementsByClassName('input-edit').length < 1) {
 
